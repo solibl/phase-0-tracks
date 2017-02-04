@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice</title>
+</head>
+<body>
+<form name="Practice"  action="success.html" method="post">
+  
+  <fieldset>
+    <div>
+      <label>Are you hungry?</label>
+        <select name="Hungry">
+          <option value="preference">Yes</option>
+          <option value="preference">No</option>
+          <option value="preference">Maybe</option>
+        </select>
+    </div>
+    <div>
+    <textarea name="textarea" rows="5" cols="50">What would you feel like eating? (N/A if answered No)</textarea>
+
+    </div>
+  </fieldset>
+ 
+  <fieldset>
+    <div>
+      <label>What is your name?</label>
+        <input type="text" name="userfullname">
+    </div>
+    <div>
+      <label>What is your age?</label>
+        <input type="number" name="userage">
+    </div>
+    <div>
+      <label>What is Today's Date?</label>
+        <input type="date" name="todaydate">
+    </div>
+    <div>
+      <input type="checkbox" name="cbagree" value="agree">
+      I agree that the information is correct.
+    </div>
+  </fieldset>  
+
+  <button type="submit">Submit Form</button>
+</form>
+</body>
+</html>
