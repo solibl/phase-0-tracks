@@ -1,15 +1,17 @@
-#body{
+#body {
   position: absolute;
   margin-left: 100px;
   margin-top: 100px;
 }
-#hat{
+
+#hat {
   position: absolute;
   z-index: +1;
   left: 90px;
   top: 40px;
 }
-#glasses{
+
+#glasses {
   position: absolute;
   z-index: 1;
   top: 207px;
