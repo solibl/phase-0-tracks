@@ -1,0 +1,36 @@
+Personal Robot Elevator:
+
+Get information from user to figure out what floor you want to go to:
+	-Input the floor into a variable.
+
+Define a max floor, number of columns, number of rows.
+row = 0
+column = 1
+counter = 1
+until counter == userinput
+	if counter is userinput 
+		press the floor button
+	else if column = 3
+	row = row +1
+	column = 1
+	else
+	column = column + 1
+end
+
+This will allow the robot to start from the 1st floor on the button list to gothrough the floors until the one you
+want is picked.
+
+Eating (My Algorithm)
+
+If I am feeling hungry:
+	-Until time is equal to 12:00 pm, 3:00 pm, 6:00 pm, 9:00 pm:
+		-Go to Fridge:
+			If food is not there:
+			-Go to fast food.
+			Anything else grab the food.
+		-Figure out if it needs to be cooked or microwaved:
+			-use Microwave if needed.
+			-use stove if needed.
+		-Eat food
+	-If time is not at 12:00 pm, 3:00 pm, 6:00 pm, 9:00 pm:
+		-Wait until time is equal to the above.
