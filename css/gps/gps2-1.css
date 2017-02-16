@@ -1,3 +1,28 @@
 body {
-  background-color: grey;
+  font-family: Georgia;
+  background-color: blue;
+  color: yellow;
+}
+
+header {
+  float: top;
+}
+
+.column-1 {
+  float: left;
+  width: 40%;
+  margin-right: 2%;
+  font-family: Helvetica;
+}
+
+.column-2 {
+  float: left;
+  width: 40%;
+  margin-left: 2%;
+}
+
+footer {
+  clear: both;
+  padding-top: 10px;
+  margin-top: 10%;
 }
