@@ -1,3 +1,4 @@
+# How many people to survey
 puts "How many people are we testing?"
 people = gets.to_i
 survey = 0
