@@ -64,7 +64,6 @@ change = change.to_sym
     end
 elsif input == "No" 
 puts "Have a great day!"
-else
 end
 
 # Print the latest version of the information and exit program.
