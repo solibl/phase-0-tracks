@@ -20,10 +20,8 @@ Students_Array = [
 ]
 
 Students_Hash = {
-  "Bob" => 'Boy',
-  "Sally" => 'Girl',
-  "Jim" => 'Boy',
-  "Anna"  => 'Girl',
+  Name: "Bob",
+  Gender: "Male"
 }
 
 # Array
@@ -54,22 +52,24 @@ p Students_Array
 
 # .each
 p Students_Hash
-Students_Hash.each { |name, gender| puts "#{name} is a #{gender}" }
+Students_Hash.each { |key, value|
+  puts "#{key} is #{value}"
+}
 p Students_Hash
 
 # .map
 p Students_Hash
-Nickname2 = Students_Hash.map { |student, gender| 
-  puts "#{student} is a #{gender}"
-  student = student.next
-}
-p Nickname2
+Students_Hash.map { |key, value|
+  value = value.upcase
+  p value
+  }
+p Students_Hash
 
 # Release 2
 
 # Number 1
 Numbers = [14, 56, 0, 484, 3]
-puts Numbers
+p Numbers
 counter = 0
 while  counter < Numbers.length 
   if Numbers[counter] < 5
@@ -77,4 +77,35 @@ while  counter < Numbers.length
   end
   counter += 1
 end
-puts Numbers
+p Numbers
+
+# Number 2
+Numbers2 = [1, 6, 4, 0, 15, 3, 60]
+p Numbers2
+
+filtered = Numbers2.select do |less|
+less < 5
+end
+
+p filtered
+
+# Number 3
+
+Numbers3 = [1, 6, 4, 0, 15, 3, 60]
+p Numbers3
+
+filtered = Numbers3.delete_if do |less|
+less > 5
+end
+
+p filtered
+
+# Number 4
+Data_structure = [16,52,123,245,124,731,6,1]
+p Data_structure
+counter = 0
+while Data_structure[counter] <= 550
+    Data_structure.delete_at(counter)
+end
+
+p Data_structure
