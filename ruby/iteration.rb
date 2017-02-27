@@ -12,100 +12,130 @@
 # age {|userage| puts "Your age is #{userage}" }
 
 # Release 1
-Students_Array = [
+students_array = [
   "Bob",
   "Sally",
   "Jim",
   "Anna"
 ]
 
-Students_Hash = {
-  Name: "Bob",
-  Gender: "Male"
+students_hash = {
+  name: "Bob",
+  gender: "Male"
 }
 
 # Array
 
 # .each
-p Students_Array
-Students_Array.each { |name| puts "#{name} is here" }
-p Students_Array
+p students_array
+students_array.each { |name| puts "#{name} is here" }
+p students_array
 
 # .map
-p Students_Array
-Nickname = Students_Array.map { |student| 
+p students_array
+nickname = students_array.map { |student| 
   puts student
   student = student.next
 }
-p Students_Array
-p Nickname
+p students_array
+p nickname
 
 # .map!
-p Students_Array
-Students_Array.map! { |student| 
+p students_array
+students_array.map! { |student| 
   puts student
   student = student.next
 }
-p Students_Array
+p students_array
 
 # Hash
 
 # .each
-p Students_Hash
-Students_Hash.each { |key, value|
+p students_hash
+students_hash.each { |key, value|
   puts "#{key} is #{value}"
 }
-p Students_Hash
+p students_hash
 
 # .map
-p Students_Hash
-Students_Hash.map { |key, value|
+p students_hash
+students_hash.map { |key, value|
   value = value.upcase
   p value
   }
-p Students_Hash
+p students_hash
 
 # Release 2
 
 # Number 1
-Numbers = [14, 56, 0, 484, 3]
-p Numbers
+# Array
+numbers = [14, 56, 0, 484, 3]
+p numbers
 counter = 0
-while  counter < Numbers.length 
-  if Numbers[counter] < 5
-    Numbers.delete_at(counter)
+while  counter < numbers.length 
+  if numbers[counter] < 5
+    numbers.delete_at(counter)
   end
   counter += 1
 end
-p Numbers
+p numbers
+
+# Hash
+labeled_items = {
+  "a" => 2,
+  "b" => 3,
+  "c" => 5,
+  "d" => 100
+}
+
+labeled_items.delete_if {|key, value| key < "c"}
+p labeled_items
 
 # Number 2
-Numbers2 = [1, 6, 4, 0, 15, 3, 60]
-p Numbers2
+# Array
+numbers2 = [1, 6, 4, 0, 15, 3, 60]
+p numbers2
 
-filtered = Numbers2.select do |less|
+filtered = numbers2.select do |less|
 less < 5
 end
 
 p filtered
 
+# Hash
+labeled_items = {
+  "a" => 2,
+  "b" => 3,
+  "c" => 5,
+  "d" => 100
+}
+
+p labeled_items.select {|key, value| key < "c"}
+
 # Number 3
+# Array
+numbers3 = [1, 6, 4, 0, 15, 3, 60]
+p numbers3
 
-Numbers3 = [1, 6, 4, 0, 15, 3, 60]
-p Numbers3
-
-filtered = Numbers3.delete_if do |less|
+filtered = numbers3.delete_if do |less|
 less > 5
 end
-
 p filtered
 
-# Number 4
-Data_structure = [16,52,123,245,124,731,6,1]
-p Data_structure
-counter = 0
-while Data_structure[counter] <= 550
-    Data_structure.delete_at(counter)
-end
+# Hash
+labeled_items = {
+  "a" => 2,
+  "b" => 3,
+  "c" => 5,
+  "d" => 100
+}
+p labeled_items.reject {|key, value| value > 5}
 
-p Data_structure
+# Number 4
+data_structure = [16,52,123,245,124,731,6,1]
+p data_structure
+counter = 0
+while data_structure[counter] <= 550
+    data_structure.delete_at(counter)
+end
+p data_structure
