@@ -17,4 +17,17 @@ describe Game do
 	it "Take the gameword and break down into inidividual string" do
 		expect(new_word.game_word).to eq ["u", "n", "i", "c", "o", "r", "n"]
 	end
+
+	it "Change the gameword to be '-' " do
+		expect(new_word.game_template).to eq ["-", "-", "-", "-", "-", "-", "-"]
+	end
+
+	it "check to see if letter was used" do
+		expect(new_word.check_if_used("u")).to eq false
+	end
+
+	it "change a letter" do
+		expect(new_word.change_letter("u")).to eq ["u", "-", "-", "-", "-", "-", "-"]
+	end
 end
+
