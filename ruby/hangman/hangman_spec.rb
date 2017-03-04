@@ -14,7 +14,7 @@ describe Game do
 		expect(new_word.get_word).to eq "unicorn"
 	end
 
-	it "Take the gameword and break down into inidividual string"
-		expect(new_word.game_word).to eq %w(u n i c o r n)
+	it "Take the gameword and break down into inidividual string" do
+		expect(new_word.game_word).to eq ["u", "n", "i", "c", "o", "r", "n"]
 	end
 end

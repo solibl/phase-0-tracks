@@ -8,8 +8,12 @@
 class Game
 	def initialize(gameword)
 		@final_word = gameword
+		@answer = gameword.split('')
 	end
 	def get_word
 		@final_word
+	end
+	def game_word
+		@answer
 	end
 end
