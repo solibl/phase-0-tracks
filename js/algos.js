@@ -68,13 +68,13 @@ function changeletter(letters_in_word) {
 console.log("Release 0")
 var test1 = ["long phrase","longest phrase","longer phrase"];
 console.log(test1);
-console.log(longword(test1));
+longword(test1);
 var test2 = ["longest phrase","longer phrase","long phrase"];
 console.log(test2);
-console.log(longword(test2));
+longword(test2);
 var test3 = ["longer phrase","long phrase","longest phrase"];
 console.log(test3);
-console.log(longword(test3));
+longword(test3);
 
 // Release 1
 console.log("Release 1")
