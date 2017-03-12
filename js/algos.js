@@ -65,34 +65,34 @@ function changeletter(letters_in_word) {
 }
 //  -------------------Driver Code ----------------------
 // Release 0
-// console.log("Release 0")
-// var test1 = ["long phrase","longest phrase","longer phrase"];
-// console.log(test1);
-// console.log(longword(test1));
-// var test2 = ["longest phrase","longer phrase","long phrase"];
-// console.log(test2);
-// console.log(longword(test2));
-// var test3 = ["longer phrase","long phrase","longest phrase"];
-// console.log(test3);
-// console.log(longword(test3));
+console.log("Release 0")
+var test1 = ["long phrase","longest phrase","longer phrase"];
+console.log(test1);
+console.log(longword(test1));
+var test2 = ["longest phrase","longer phrase","long phrase"];
+console.log(test2);
+console.log(longword(test2));
+var test3 = ["longer phrase","long phrase","longest phrase"];
+console.log(test3);
+console.log(longword(test3));
 
-// // Release 1
-// console.log("Release 1")
-// var person_one = {name: "Steven", age: 54};
-// var person_two = {name: "Tamir", age: 53};
-// console.log(person_one);
-// console.log(person_two);
-// checker(person_one, person_two);
-// var person_one = {name: "Brian", age: 54};
-// var person_two = {name: "Brian", age: 53};
-// console.log(person_one);
-// console.log(person_two);
-// checker(person_one, person_two);
-// var person_one = {name: "Steven", age: 54};
-// var person_two = {name: "Tamir", age: 54};
-// console.log(person_one);
-// console.log(person_two);
-// checker(person_one, person_two);
+// Release 1
+console.log("Release 1")
+var person_one = {name: "Steven", age: 54};
+var person_two = {name: "Tamir", age: 53};
+console.log(person_one);
+console.log(person_two);
+checker(person_one, person_two);
+var person_one = {name: "Brian", age: 54};
+var person_two = {name: "Brian", age: 53};
+console.log(person_one);
+console.log(person_two);
+checker(person_one, person_two);
+var person_one = {name: "Steven", age: 54};
+var person_two = {name: "Tamir", age: 54};
+console.log(person_one);
+console.log(person_two);
+checker(person_one, person_two);
 
 // Release 2
 for (counter = 1; counter < 11; counter++) {
