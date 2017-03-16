@@ -1,0 +1,108 @@
+RELEASE 2
+
+1.Display the information in one table (either table is fine)
+sqlite> SELECT * FROM Character_Stats;
+1|Ana|Support|12|true|1
+2|Reinhardt|Tank|11|true|1
+3|Soldier 76|DPS|9|true|1
+4|Mercy|Support|8|true|2
+5|Lucio|Support|8|true|1
+6|Roadhog|Tank|7|true|1
+7|Sombra|DPS|1|false|3
+8|Torbjorn|Defense|1|false|3
+9|Junkrat|Defense|2|false|2
+10|Tracer|DPS|3|true|2
+11|Genji|DPS|4|true|1
+
+2.Update an item that meets some condition (you can choose a condition that makes sense)
+sqlite> UPDATE Character_Stats SET Tier_List_id=1 WHERE Character_Name="Tracer"; 
+sqlite> SELECT * FROM Character_Stats;                                          
+1|Ana|Support|12|true|1
+2|Reinhardt|Tank|11|true|1
+3|Soldier 76|DPS|9|true|1
+4|Mercy|Support|8|true|2
+5|Lucio|Support|8|true|1
+6|Roadhog|Tank|7|true|1
+7|Sombra|DPS|1|false|3
+8|Torbjorn|Defense|1|false|3
+9|Junkrat|Defense|2|false|2
+10|Tracer|DPS|3|true|1
+11|Genji|DPS|4|true|1
+
+3. Display the information in both tables using one query.
+sqlite> SELECT * FROM Character_Stats, TierList WHERE Character_Stats.Tier_List_id = TierList.id;
+1|Ana|Support|12|true|1|1|Top Tier
+2|Reinhardt|Tank|11|true|1|1|Top Tier
+3|Soldier 76|DPS|9|true|1|1|Top Tier
+4|Mercy|Support|8|true|2|2|Mid Tier
+5|Lucio|Support|8|true|1|1|Top Tier
+6|Roadhog|Tank|7|true|1|1|Top Tier
+7|Sombra|DPS|1|false|3|3|Bottom Tier
+8|Torbjorn|Defense|1|false|3|3|Bottom Tier
+9|Junkrat|Defense|2|false|2|2|Mid Tier
+10|Tracer|DPS|3|true|1|1|Top Tier
+11|Genji|DPS|4|true|1|1|Top Tier
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+sqlite> SELECT Character_Stats.Character_Name, Character_Stats.Type_Of_Character, TierList.TierList FROM Character_Stats JOIN TierList ON Character_Stats.Tier_List_id = TierList.id;
+Ana|Support|Top Tier
+Reinhardt|Tank|Top Tier
+Soldier 76|DPS|Top Tier
+Mercy|Support|Mid Tier
+Lucio|Support|Top Tier
+Roadhog|Tank|Top Tier
+Sombra|DPS|Bottom Tier
+Torbjorn|Defense|Bottom Tier
+Junkrat|Defense|Mid Tier
+Tracer|DPS|Top Tier
+Genji|DPS|Top Tier
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense)
+sqlite> DELETE FROM Character_Stats WHERE Character_Name="Lucio";
+sqlite> SELECT * FROM Character_Stats;
+1|Ana|Support|12|true|1
+2|Reinhardt|Tank|11|true|1
+3|Soldier 76|DPS|9|true|1
+4|Mercy|Support|8|true|2
+6|Roadhog|Tank|7|true|1
+7|Sombra|DPS|1|false|3
+8|Torbjorn|Defense|1|false|3
+9|Junkrat|Defense|2|false|2
+10|Tracer|DPS|3|true|1
+11|Genji|DPS|4|true|1
+
+RELEASE 3
+
+1. The different kinds of joins are INNER, LEFT, RIGHT, FULL JOIN. 
+INNER JOIN: Returns all rows when there is at least one match in BOTH tables
+LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
+RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
+FULL JOIN: Return all rows when there is a match in ONE of the tables
+
+2. Try a few different joins in your database
+
+LEFT OUTER JOIN
+sqlite> SELECT Character_Stats.Character_Name, TierList.TierList FROM Character_Stats LEFT OUTER JOIN TierList on Character_Stats.Tier_List_id=TierList.id;
+Ana|Top Tier
+Reinhardt|Top Tier
+Soldier 76|Top Tier
+Mercy|Mid Tier
+Roadhog|Top Tier
+Sombra|Bottom Tier
+Torbjorn|Bottom Tier
+Junkrat|Mid Tier
+Tracer|Top Tier
+Genji|Top Tier
+
+INNER JOIN
+sqlite> SELECT Character_Stats.Character_Name, TierList.TierList FROM Character_Stats INNER JOIN TierList on Character_Stats.Tier_List_id=TierList.id;
+Ana|Top Tier
+Reinhardt|Top Tier
+Soldier 76|Top Tier
+Mercy|Mid Tier
+Roadhog|Top Tier
+Sombra|Bottom Tier
+Torbjorn|Bottom Tier
+Junkrat|Mid Tier
+Tracer|Top Tier
+Genji|Top Tier
